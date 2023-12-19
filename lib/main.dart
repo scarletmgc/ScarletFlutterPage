@@ -44,6 +44,21 @@ Widget cuerpo() {
             image: NetworkImage(
                 "https://my.alfred.edu/zoom/_images/fall-drone-shot.jpg"),
             fit: BoxFit.cover)),
-    child: Center(child: Text("Que Tal")),
+    child: Center(
+      child: campo(),
+    ),
+  );
+}
+
+Widget campo() {
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+    child: TextField(
+      decoration: InputDecoration(
+        hintText: "user",
+        fillColor: Colors.white,
+        filled: true,
+      ),
+    ),
   );
 }
