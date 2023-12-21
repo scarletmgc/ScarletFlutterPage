@@ -44,9 +44,11 @@ Widget cuerpo() {
             image: NetworkImage(
                 "https://my.alfred.edu/zoom/_images/fall-drone-shot.jpg"),
             fit: BoxFit.cover)),
-    child: Center(
-      child: campo(),
-    ),
+    child: Column(children: <Widget>[
+      campo(),
+      contrasena(),
+      bottonEntrar(),
+    ]),
   );
 }
 
@@ -60,5 +62,28 @@ Widget campo() {
         filled: true,
       ),
     ),
+  );
+}
+
+Widget contrasena() {
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+    child: TextField(
+      obscureText: true,
+      decoration: InputDecoration(
+        hintText: "Contrasena",
+        fillColor: Colors.white,
+        filled: true,
+      ),
+    ),
+  );
+}
+
+Widget bottonEntrar() {
+  return Container(
+    color: Colors.blueAccent,
+    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+    child: Text("Enter", style: TextStyle(fontSize: 24)),
+    //onPressed: () {},
   );
 }
